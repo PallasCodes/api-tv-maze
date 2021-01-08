@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV Maze</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Find That Show!</h1>
+      <form>
+        <input type="text" id="search" autocomplete="off" autofocus />
+        <button type="submit" id="searchBtn">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+    </header>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modal"
+      tabindex="-1"
+      aria-labelledby="modalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body container-fluid">
+            <!--  -->
+         </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <a href="" target="_blank" id="btnInfo" type="button" class="btn btn-primary">More info</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+    </main>
+
+    <template id="template">
+      <a href="" class="linkWrapper" data-bs-toggle="modal" data-bs-target="#modal" data-id="" data-index="">
+        <figure class="showCard" >
+          <figcaption>
+            <span class="showTitle"></span>
+            <span class="rank"></span>
+          </figcaption>
+          <img src="https://static.tvmaze.com/images/no-img/no-img-portrait-text.png" class="cardImage">
+        </figure>
+      </a>
+    </template>
+
+    <template id="content">
+      <div class="row">
+        <div class="col-md-5">
+          <img src="https://static.tvmaze.com/images/no-img/no-img-portrait-text.png" alt="" class="img-fluid d-block w-100">
+        </div>
+        <div class="movieContent col-md-7">
+          <p>
+            <strong>Summary:</strong>
+            <br>
+            <span class="summary">
+              
+            </span>
+          </p>
+          <p>
+            <strong>Genres: </strong> <span class="genres"></span>
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <footer>
+      <p>Powered by <a href="https://www.tvmaze.com/s" target="_blank">TV Maze</a></p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
